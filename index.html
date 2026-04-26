@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Quality Catalyst — Consulting, Training, Inspection & Auditing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo-area">
+      <img src="images/logo.jpeg" alt="TQC Logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="logo-icon" style="display:none;"><img src="Screenshot 2026-04-14 141346.png"></div>
+      <div class="logo-text">
+        <div class="company">THE QUALITY CATALYST</div>
+        <div class="tagline">Consulting · Training · Inspection · Auditing</div>
+      </div>
+    </a>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-mega" id="servicesMega"><a href="services.html" class="mega-trigger">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Hamburger button — mobile only, right corner -->
+    <button class="mob-menu-btn" id="mobMenuBtn" onclick="openDrawer()" aria-label="Open navigation menu">
+      <span class="mob-menu-bar"></span>
+      <span class="mob-menu-bar"></span>
+      <span class="mob-menu-bar"></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+<!-- MOBILE SIDE DRAWER -->
+<aside class="side-drawer" id="sideDrawer" aria-hidden="true" aria-label="Navigation menu">
+  <div class="drawer-header">
+    <a href="index.html" class="drawer-logo">
+      <div class="drawer-logo-icon">TQC</div>
+      <div class="drawer-logo-text">The Quality Catalyst<span>Consulting · Training · Auditing</span></div>
+    </a>
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">
+      <svg viewBox="0 0 16 16"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>
+    </button>
+  </div>
+  <div class="drawer-search">
+    <input type="text" id="drawerSearchInput" class="drawer-search-input" placeholder="Search services…" autocomplete="off"/>
+    <button class="drawer-search-btn" onclick="submitDrawerSearch()" aria-label="Search">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><circle cx="8" cy="8" r="5"/><line x1="13" y1="13" x2="18" y2="18"/></svg>
+    </button>
+    <div id="drawerSearchResults"></div>
+  </div>
+  <div class="drawer-nav" id="drawerNav"></div>
+  <div class="drawer-footer">
+    <a href="contact.html" class="drawer-enquire-btn">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M4 4h12c1.1 0 2 .9 2 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2z"/><polyline points="2,6 10,11 18,6"/></svg>
+      Enquire Now
+    </a>
+  </div>
+</aside>
+
+<!-- SLIDER -->
+<div class="slider-section">
+  <div class="slider-wrap">
+    <div class="slider" id="slider">
+
+      <div class="slide slide-1 active">
+        <img src="images/slide1.png" alt="" class="slide-bg"/>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">Latest News</span>
+          <h2>Global Standards,<br>Local Expertise</h2>
+          <p>Helping organizations worldwide achieve ISO certification and build sustainable management systems across Quality, Safety, Environment &amp; more.</p>
+          <a href="services.html" class="slide-btn">Explore Services →</a>
+        </div>
+      </div>
+
+      <div class="slide slide-2">
+        <img src="images/slide2.png" alt="" class="slide-bg"/>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">Our Expertise</span>
+          <h2>Trusted by Leading<br>Organizations Across India</h2>
+          <p>From Alstom Transport to Indian Railways — our certified consultants deliver end-to-end implementation, inspection, and audit support.</p>
+          <a href="about.html" class="slide-btn">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="slide slide-3">
+        <img src="images/slide3.png" alt="" class="slide-bg"/>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">Our Services</span>
+          <h2>ISO Certification<br>Made Simple</h2>
+          <p>Structured consulting for ISO 9001, ISO 14001, ISO 45001, ISO 27001, IATF 16949, SA 8000, and 50+ more management standards.</p>
+          <a href="contact.html" class="slide-btn">Get In Touch →</a>
+        </div>
+      </div>
+
+    </div>
+    <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">&#8592;</button>
+    <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">&#8594;</button>
+    <div class="slider-dots" id="sliderDots"></div>
+    <div class="slider-progress"><div class="slider-progress-bar" id="sliderProgressBar"></div></div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="page-layout">
+  <main>
+
+    <!-- FEATURE BOXES -->
+    <h2 class="section-title">What We Do</h2>
+    <div class="feature-grid">
+      <div class="feature-box">
+        <span class="feature-icon">🎨</span>
+        <h3>Design</h3>
+        <p>Craft tailored management system frameworks aligned to your industry and international standards.</p>
+      </div>
+      <div class="feature-box">
+        <span class="feature-icon">⚙️</span>
+        <h3>Develop</h3>
+        <p>Build robust processes, documentation, SOPs and compliance structures from the ground up.</p>
+      </div>
+      <div class="feature-box">
+        <span class="feature-icon">🚀</span>
+        <h3>Deliver</h3>
+        <p>Implement, train your team, and ensure seamless certification audit readiness.</p>
+      </div>
+      <div class="feature-box">
+        <span class="feature-icon">📄</span>
+        <h3>Document</h3>
+        <p>Complete policies, manuals, records, and audit-ready documentation packages.</p>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-num">120+</div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1200+</div>
+        <div class="stat-label">Expert Team Members</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">600M+</div>
+        <div class="stat-label">People Impacted</div>
+      </div>
+    </div>
+
+    <!-- INTRO CARD -->
+    <div class="content-card">
+      <h2 class="section-title" style="font-size:20px;">Brief Introduction</h2>
+      <p><strong>The Quality Catalyst</strong> is a leading Consulting, Training, Inspection &amp; Auditing organization. Our expertise encompasses the development and improvement of the ecosystem of Quality, Health &amp; Safety, Environment, Social compliances, Information Technology, and Sustainable growth of all types of industries and Business Units.</p>
+      <p>The organization itself follows <strong>ISO 9001:2015 Quality Management System</strong>, which reflects our commitment to practice what we preach. We are well equipped with valuable assets like expertise gained from international exposure with globally known organizations.</p>
+      <p>Our <strong>vision</strong> is to attain and maintain a pioneer position in the consulting, training &amp; auditing segment worldwide through ensuring value-added services, customer satisfaction and benchmarking.</p>
+    </div>
+
+    <!-- PREMIUM CLIENTS -->
+    <div class="clients-strip">
+      <h3>🏆 Some of Our Premium Clients</h3>
+      <div class="client-list">
+        <span class="client-pill">Alstom Transport India Ltd (MMRC LINE 3)</span>
+        <span class="client-pill">Sterlite Power Transmission Ltd</span>
+        <span class="client-pill">India International House Limited</span>
+        <span class="client-pill">Spectrum Automation &amp; Controls</span>
+        <span class="client-pill">Jackson Engineers Ltd</span>
+        <span class="client-pill">DSIIDC</span>
+        <span class="client-pill">Indian Railways</span>
+      </div>
+    </div>
+
+    <!-- KEY SERVICES OVERVIEW -->
+    <div class="content-card">
+      <h2 class="section-title" style="font-size:20px;">Our Key Services</h2>
+      <p>We offer a comprehensive range of consulting, training, and auditing services structured around three core pillars:</p>
+      <div style="display:grid;gap:12px;margin-top:16px;">
+        <div class="approach-step">
+          <div class="step-num">1</div>
+          <div><strong>Consultancy Services</strong><p>Development of management systems based on ISO 9001:2015, ISO 14001:2015, ISO 45001, ISO 27000, IATF 16949, IRIS 22163, SA 8000, ISO 50001 and many more.</p></div>
+        </div>
+        <div class="approach-step">
+          <div class="step-num blue">2</div>
+          <div><strong>Training Modules</strong><p>Automotive Core Tools, Production Enhancement, Process Efficiency, Problem Solving Techniques, Change Management and custom training programs.</p></div>
+        </div>
+        <div class="approach-step">
+          <div class="step-num green">3</div>
+          <div><strong>2nd &amp; 3rd Party Inspection &amp; Auditing</strong><p>Quality Audits, HSE Audits, Energy Audits, IS Audits, VAPT Audits, Special Audits, and Compliance Management Services.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOG SECTION -->
+    <section id="blog">
+      <h2 class="section-title">Latest from Our Blog</h2>
+
+      <article class="blog-card">
+        <div class="blog-card-header">
+          <span class="blog-tag">Environmental Management</span>
+          <span class="blog-date">2025</span>
+        </div>
+        <h3 class="blog-title">Why is the revision of ISO 14001 a critical time for companies to meet ESG challenges?</h3>
+        <div class="blog-body">
+          <p>Climate change, net-zero emissions, increasingly stringent sustainability requirements, and supply chain pressures — ISO 14001 has become an essential environmental management tool for businesses worldwide.</p>
+          <p>According to official ISO documentation, ISO 14001 is the most widely adopted Environmental Management System (EMS) standard globally, helping companies systematically manage environmental impacts and respond to stakeholders&#x2019; expectations for sustainability.</p>
+          <p>The new version <strong>ISO 14001:2026</strong> will not introduce any new mandatory requirements &#x2014; it will make the standard clearer and more focused on current issues. Climate Action and <strong>ESG</strong> are now an in-depth examination of a company&#x2019;s environmental governance capabilities.</p>
+          <p>If companies can grasp the key points of the ISO 14001 revision in advance, they can not only smoothly navigate the transition period, but also elevate their environmental management system to a strategic level, building long-term competitiveness.</p>
+        </div>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span class="blog-iso-badge">ISO 14001:2026</span>
+            <span class="blog-iso-badge">ESG</span>
+            <span class="blog-iso-badge">Net-Zero</span>
+          </div>
+          <a href="contact.html" class="blog-read-more">Enquire About This Standard &#x2192;</a>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Contact Us</div>
+      <div class="sidebar-card-body">
+        <div class="contact-item">
+          <span class="contact-icon">🏢</span>
+          <div>
+            <div class="contact-label">Company</div>
+            <div style="font-weight:600;">M/S THE QUALITY CATALYST</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <div class="contact-label">Registered Office</div>
+            <div>393/11, Nehru Nagar, Baljeet Nagar, New Delhi – 110008</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <div class="contact-label">Noida Office</div>
+            <div>G 75, Sector 56, Noida – 201301, Uttar Pradesh</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <div class="contact-label">Phone / Mobile</div>
+            <div>120-3144262 &nbsp;|&nbsp; +91 9999188058</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <div class="contact-label">Email</div>
+            <div>tqc.delhi@gmail.com</div>
+          </div>
+        </div>
+        <a href="contact.html" class="enquire-btn">Enquire Now</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div>&copy; 2025 <strong>M/S The Quality Catalyst</strong> · All rights reserved.</div>
+  <div style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:6px;">
+    RO: 393/11 Nehru Nagar Baljeet Nagar, New Delhi-110008 &nbsp;|&nbsp; Noida: G 75 Sector 56, Noida-201301
+    &nbsp;|&nbsp; Tel: 120-3144262 &nbsp;|&nbsp; Mob: 9999188058 &nbsp;|&nbsp; tqc.delhi@gmail.com
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

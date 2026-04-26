@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard — The Quality Catalyst</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="topbar admin-nav" style="position:sticky;top:0;z-index:1000;">
+  <div class="logo-area" style="padding:14px 0;">
+    <img src="images/logo.jpeg" alt="TQC" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+    <div class="logo-icon" style="display:none;"><img src="Screenshot 2026-04-14 141346.png"></div>
+    <div class="logo-text">
+      <div class="company">THE QUALITY CATALYST</div>
+      <div class="tagline">Admin Dashboard</div>
+    </div>
+  </div>
+  <div class="admin-nav-links">
+    <a href="index.html" target="_blank">🌐 View Site</a>
+    <button class="logout-btn" onclick="adminLogout()">Logout →</button>
+  </div>
+</header>
+
+<div class="admin-body">
+  <div style="margin-bottom:24px;">
+    <h1 style="font-size:22px;color:var(--navy);margin-bottom:4px;">Enquiries Dashboard</h1>
+    <p style="font-size:14px;color:var(--muted);">All contact form submissions from the website.</p>
+  </div>
+
+  <div class="admin-stats">
+    <div class="admin-stat">
+      <div class="num" id="totalCount">—</div>
+      <div class="lbl">Total Enquiries</div>
+    </div>
+    <div class="admin-stat" style="border-left-color:var(--blue);">
+      <div class="num" id="todayCount">—</div>
+      <div class="lbl">Today's Enquiries</div>
+    </div>
+    <div class="admin-stat" style="border-left-color:#16a34a;">
+      <div class="num" id="weekCount">—</div>
+      <div class="lbl">This Week</div>
+    </div>
+  </div>
+
+  <div class="table-card">
+    <div class="table-header">
+      <h2>All Enquiries</h2>
+      <button class="refresh-btn" onclick="loadEnquiries()">🔄 Refresh</button>
+    </div>
+    <div class="table-wrap">
+      <table id="enquiriesTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="enquiriesBody">
+          <tr><td colspan="8"><div class="empty-state"><div class="icon">⏳</div><p>Loading...</p></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

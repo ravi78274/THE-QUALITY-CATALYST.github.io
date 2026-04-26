@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — The Quality Catalyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo-area">
+      <img src="images/logo.jpeg" alt="TQC Logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="logo-icon" style="display:none;"><img src="Screenshot 2026-04-14 141346.png"></div>
+      <div class="logo-text">
+        <div class="company">THE QUALITY CATALYST</div>
+        <div class="tagline">Consulting · Training · Inspection · Auditing</div>
+      </div>
+    </a>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li class="has-mega" id="servicesMega"><a href="services.html" class="mega-trigger">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Hamburger button — mobile only, right corner -->
+    <button class="mob-menu-btn" id="mobMenuBtn" onclick="openDrawer()" aria-label="Open navigation menu">
+      <span class="mob-menu-bar"></span>
+      <span class="mob-menu-bar"></span>
+      <span class="mob-menu-bar"></span>
+    </button>
+  </div>
+</header>
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+<!-- MOBILE SIDE DRAWER -->
+<aside class="side-drawer" id="sideDrawer" aria-hidden="true" aria-label="Navigation menu">
+  <div class="drawer-header">
+    <a href="index.html" class="drawer-logo">
+      <div class="drawer-logo-icon">TQC</div>
+      <div class="drawer-logo-text">The Quality Catalyst<span>Consulting · Training · Auditing</span></div>
+    </a>
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">
+      <svg viewBox="0 0 16 16"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>
+    </button>
+  </div>
+  <div class="drawer-search">
+    <input type="text" id="drawerSearchInput" class="drawer-search-input" placeholder="Search services…" autocomplete="off"/>
+    <button class="drawer-search-btn" onclick="submitDrawerSearch()" aria-label="Search">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><circle cx="8" cy="8" r="5"/><line x1="13" y1="13" x2="18" y2="18"/></svg>
+    </button>
+    <div id="drawerSearchResults"></div>
+  </div>
+  <div class="drawer-nav" id="drawerNav"></div>
+  <div class="drawer-footer">
+    <a href="contact.html" class="drawer-enquire-btn">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M4 4h12c1.1 0 2 .9 2 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2z"/><polyline points="2,6 10,11 18,6"/></svg>
+      Enquire Now
+    </a>
+  </div>
+</aside>
+
+<div class="page-layout">
+  <main>
+    <div class="page-hero">
+      <h1>About Us</h1>
+      <p>Trusted consulting, training, inspection &amp; auditing — practising what we preach</p>
+    </div>
+
+    <!-- WHO WE ARE -->
+    <div class="content-card">
+      <div class="about-intro">
+        <div>
+          <h2 class="section-title" style="font-size:20px;">Who We Are</h2>
+          <p><strong>The Quality Catalyst</strong> is a leading Consulting, Training, Inspection &amp; Auditing organization. Our expertise encompasses the development and improvement of the ecosystem of Quality, Health &amp; Safety, Environment, Social compliances, Information Technology, and Sustainable growth of all types of industries and Business Units.</p>
+          <p>The organization itself follows <strong>ISO 9001:2015 Quality Management System</strong>, which reflects our commitment to practice what we preach. We are well equipped with valuable assets like expertise gained from international exposure with globally known organizations.</p>
+        </div>
+        <div class="about-img">
+          <img src="maxresdefault.jpg" alt="TQC "/>
+        </div>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-box">
+          <h4>🎯 Our Vision</h4>
+          <p>To attain and maintain a pioneer position in the consulting, training &amp; auditing segment worldwide through ensuring value-added services, customer satisfaction and benchmarking.</p>
+        </div>
+        <div class="value-box">
+          <h4>🚀 Our Mission</h4>
+          <p>To motivate and assist organizations' Quality, Health, Environment, Safety, Information, and Social Management Systems as per International Standards through enhancing internal skills of Management and Staff.</p>
+        </div>
+        <div class="value-box">
+          <h4>📈 Our Strategy</h4>
+          <p>To differentiate ourselves as an efficient provider of consultancy and training services at the expected level of quality, service and added value through Process Improvement Methodology.</p>
+        </div>
+        <div class="value-box">
+          <h4>🤝 Our Commitment</h4>
+          <p>We believe in working with teams within predefined deadlines and budgets to deliver on company expectations — not surprises.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONSULTING PROCEDURE DIAGRAM -->
+    <div class="content-card">
+      <h2 class="section-title" style="font-size:20px;">Our Consulting Procedure</h2>
+      <p>Our structured consulting process is designed to deliver consistent, measurable results across all engagements — from initial gap assessment through to certification and continuous improvement.</p>
+      <div class="process-img" style="margin-top:20px;">
+       <img src="F4.png" alt="TQC Consulting Procedure Diagram"/>
+      </div>
+      <p class="process-img-label">The Quality Catalyst — Consulting Procedure Framework</p>
+    </div>
+
+    <!-- 5-PHASE APPROACH -->
+    <div class="content-card">
+      <h2 class="section-title" style="font-size:20px;">Our 5-Phase Approach</h2>
+      <div class="approach-step">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Gap Assessment</strong>
+          <p>Evaluate current practices against standard requirements to identify gaps and define the roadmap for implementation.</p>
+        </div>
+      </div>
+      <div class="approach-step">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Documentation</strong>
+          <p>Develop all required policies, procedures, work instructions, SOPs, forms, and records aligned to the applicable standard.</p>
+        </div>
+      </div>
+      <div class="approach-step">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Training</strong>
+          <p>Conduct awareness and competency training for leadership, process owners, internal auditors, and front-line staff.</p>
+        </div>
+      </div>
+      <div class="approach-step">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Implementation</strong>
+          <p>Guide hands-on deployment, internal audits, management review facilitation, corrective action, and certification audit preparation.</p>
+        </div>
+      </div>
+      <div class="approach-step">
+        <div class="step-num">5</div>
+        <div>
+          <strong>Continuous Improvement</strong>
+          <p>Post-certification support, surveillance audit preparation, ongoing improvement programs, and system enhancement.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM CLIENTS -->
+    <div class="content-card">
+      <h2 class="section-title" style="font-size:20px;">Some of Our Premium Clients</h2>
+      <p style="margin-bottom:16px;">We have had the privilege of partnering with leading organizations across diverse sectors:</p>
+      <div class="client-list">
+        <span class="client-pill">Alstom Transport India Ltd (MMRC LINE 3)</span>
+        <span class="client-pill">Sterlite Power Transmission Ltd</span>
+        <span class="client-pill">India International House Limited</span>
+        <span class="client-pill">Spectrum Automation &amp; Controls</span>
+        <span class="client-pill">Jackson Engineers Ltd</span>
+        <span class="client-pill">Delhi State Industrial &amp; Infrastructure Development Corporation Ltd. (DSIIDC)</span>
+        <span class="client-pill">Indian Railways</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Contact Us</div>
+      <div class="sidebar-card-body">
+        <div class="contact-item">
+          <span class="contact-icon">🏢</span>
+          <div><div class="contact-label">Company</div><div style="font-weight:600;">M/S THE QUALITY CATALYST</div></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div><div class="contact-label">Registered Office</div><div>393/11 Nehru Nagar, Baljeet Nagar, New Delhi – 110008</div></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div><div class="contact-label">Noida Office</div><div>G 75, Sector 56, Noida – 201301</div></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div><div class="contact-label">Tel / Mob</div><div>120-3144262 | +91 9999188058</div></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div><div class="contact-label">Email</div><div>tqc.delhi@gmail.com</div></div>
+        </div>
+        <a href="contact.html" class="enquire-btn">Enquire Now</a>
+      </div>
+    </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div>&copy; 2025 <strong>M/S The Quality Catalyst</strong> · All rights reserved.</div>
+  <div style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:6px;">
+    RO: 393/11 Nehru Nagar Baljeet Nagar, New Delhi-110008 &nbsp;|&nbsp; Noida: G 75 Sector 56, Noida-201301
+    &nbsp;|&nbsp; Tel: 120-3144262 &nbsp;|&nbsp; Mob: 9999188058
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services — The Quality Catalyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo-area">
+      <img src="images/logo.jpeg" alt="TQC Logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="logo-icon" style="display:none;"><img src="Screenshot 2026-04-14 141346.png"></div>
+      <div class="logo-text">
+        <div class="company">THE QUALITY CATALYST</div>
+        <div class="tagline">Consulting · Training · Inspection · Auditing</div>
+      </div>
+    </a>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-mega" id="servicesMega"><a href="services.html" class="mega-trigger active">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Hamburger button — mobile only, right corner -->
+    <button class="mob-menu-btn" id="mobMenuBtn" onclick="openDrawer()" aria-label="Open navigation menu">
+      <span class="mob-menu-bar"></span>
+      <span class="mob-menu-bar"></span>
+      <span class="mob-menu-bar"></span>
+    </button>
+  </div>
+</header>
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+<!-- MOBILE SIDE DRAWER -->
+<aside class="side-drawer" id="sideDrawer" aria-hidden="true" aria-label="Navigation menu">
+  <div class="drawer-header">
+    <a href="index.html" class="drawer-logo">
+      <div class="drawer-logo-icon">TQC</div>
+      <div class="drawer-logo-text">The Quality Catalyst<span>Consulting · Training · Auditing</span></div>
+    </a>
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">
+      <svg viewBox="0 0 16 16"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>
+    </button>
+  </div>
+  <div class="drawer-search">
+    <input type="text" id="drawerSearchInput" class="drawer-search-input" placeholder="Search services…" autocomplete="off"/>
+    <button class="drawer-search-btn" onclick="submitDrawerSearch()" aria-label="Search">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><circle cx="8" cy="8" r="5"/><line x1="13" y1="13" x2="18" y2="18"/></svg>
+    </button>
+    <div id="drawerSearchResults"></div>
+  </div>
+  <div class="drawer-nav" id="drawerNav"></div>
+  <div class="drawer-footer">
+    <a href="contact.html" class="drawer-enquire-btn">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M4 4h12c1.1 0 2 .9 2 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2z"/><polyline points="2,6 10,11 18,6"/></svg>
+      Enquire Now
+    </a>
+  </div>
+</aside>
+
+<div class="page-layout">
+  <main>
+    <div class="page-hero">
+      <h1>Our Services</h1>
+      <p>Comprehensive management system consulting, training, inspection &amp; auditing</p>
+    </div>
+
+    <!-- CORE ISO SERVICES - EXPANDABLE CARDS -->
+    <h2 class="section-title">Core ISO Consulting Services</h2>
+    <div class="services-grid" id="servicesGrid">
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">✅</span>
+          <h3>Quality Management System (ISO 9001:2015)</h3>
+          <p class="short-desc">Build customer-focused quality frameworks that drive consistent performance and continuous improvement.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>IATF 16949 – Automotive Sector QMS</li>
+              <li>AS 9100/9110/9120 – Aviation, Space &amp; Defense</li>
+              <li>ISO 17025 – Testing &amp; Calibration Laboratory</li>
+              <li>ISO 15189 – Medical Laboratory QMS</li>
+              <li>ISO 13485 – Medical Device QMS</li>
+              <li>TL 9000 – Telecom Industry QMS</li>
+              <li>ISO 22163 – Railway Applications QMS</li>
+              <li>API Q1/Q2 – Petroleum &amp; Natural Gas Industry</li>
+              <li>GMP / cGMP / GLP / GHP</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🌿</span>
+          <h3>Environmental Management (ISO 14001:2015)</h3>
+          <p class="short-desc">Identify environmental impacts, achieve regulatory compliance, and improve sustainability performance.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>ISO 14064 – GHG Certified Emission Reductions (CERs) Accounting</li>
+              <li>ISO 14044 – Life Cycle Assessment</li>
+              <li>Corporate &amp; Environmental Financial Accounting</li>
+              <li>Higg FEM 3.0 – Facility Environment Management</li>
+              <li>RoHS 3 – Restriction of Hazardous Substances</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🦺</span>
+          <h3>Occupational Health &amp; Safety (ISO 45001)</h3>
+          <p class="short-desc">Reduce workplace incidents, protect your workforce, and meet global OH&amp;S requirements.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>Hazard Identification &amp; Risk Assessment (HIRA)</li>
+              <li>HAZOP Study – Hazard and Operability Study</li>
+              <li>HAZID Study – Hazard Identification Study</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🔐</span>
+          <h3>Information Security Management (ISO 27001)</h3>
+          <p class="short-desc">Protect sensitive data assets, manage information security risks, and build stakeholder trust.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>ISO 20000-1 – IT Service Management (ITSM)</li>
+              <li>ISO 22301 – Business Continuity Management (BCMS)</li>
+              <li>COBIT Framework Implementation</li>
+              <li>Risk Assessment &amp; Statement of Applicability (SoA)</li>
+              <li>IS Audit &amp; Compliance Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">⚡</span>
+          <h3>Energy Management (ISO 50001)</h3>
+          <p class="short-desc">Reduce energy consumption, lower costs, and demonstrate your commitment to energy efficiency.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>Energy Baseline Establishment &amp; Significant Energy Uses (SEUs)</li>
+              <li>Energy Audits &amp; Monitoring Programs</li>
+              <li>Action Plans for Measurable Energy Savings</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🍽️</span>
+          <h3>Food Safety Management (ISO 22000)</h3>
+          <p class="short-desc">Ensure food safety across the supply chain with internationally recognized HACCP-based systems.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>Hazard Analysis &amp; HACCP Plan Development</li>
+              <li>Prerequisite Programs (PRPs)</li>
+              <li>Food Safety Team Training</li>
+              <li>Supplier Verification &amp; Supply Chain Controls</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🤝</span>
+          <h3>Social Accountability (SA 8000)</h3>
+          <p class="short-desc">Demonstrate ethical labour practices and corporate social responsibility.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>ISO 26000 – Social Responsibility Management System</li>
+              <li>Higg FSLM – Facility Social &amp; Labour Module</li>
+              <li>SEDEX Compliance</li>
+              <li>Child Labour, Forced Labour &amp; Discrimination Policies</li>
+              <li>Freedom of Association per ILO Conventions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🧵</span>
+          <h3>Textile Exchange (GRS / GOTS)</h3>
+          <p class="short-desc">Certify responsible sourcing and sustainable textile production for global retail compliance.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>GRS – Global Recycled Standard</li>
+              <li>GOTS – Global Organic Textile Standard</li>
+              <li>Supply Chain Mapping &amp; Traceability</li>
+              <li>On-site Audit Preparation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🔍</span>
+          <h3>SEMTA Audit &amp; CT-PAT</h3>
+          <p class="short-desc">Supply chain security compliance for US customs and SEMTA technical evaluations.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>CT-PAT Supply Chain Security Program</li>
+              <li>SEMTA Technical Competency Evaluations</li>
+              <li>Importer/Exporter Compliance</li>
+              <li>Logistics Provider Security Assessment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">📊</span>
+          <h3>Business Excellence &amp; Process Improvement</h3>
+          <p class="short-desc">Operational improvement tools to drive performance, productivity, and quality culture.</p>
+          <button class="read-more-btn" onclick="toggleService(this)">Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></button>
+        </div>
+        <div class="service-expanded">
+          <div class="service-expanded-inner">
+            This service helps organizations implement structured systems to improve efficiency, ensure compliance with international standards, reduce risks, and enhance overall performance. Our approach includes assessment, documentation, training, implementation, and continuous improvement support.
+            <ul>
+              <li>Six Sigma – DMAIC &amp; DFSS</li>
+              <li>SPC / SQC / DOE</li>
+              <li>Kaizen &amp; 5S / JIT</li>
+              <li>Total Productive Maintenance (TPM)</li>
+              <li>Total Quality Management (TQM)</li>
+              <li>Process Development &amp; Redesign</li>
+              <li>Industrial Insurance Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- VAPT AUDIT SERVICES -->
+    <div class="svc-cat">
+      <h3>🛡️ VAPT Audit Services <span>IT Security</span></h3>
+      <div class="svc-tag-grid">
+        <span class="svc-tag">Web Application Security Audit</span>
+        <span class="svc-tag">Mobile PT Audit (Android &amp; iOS)</span>
+        <span class="svc-tag">Network Security Audit</span>
+        <span class="svc-tag">Wireless Security Audit</span>
+        <span class="svc-tag">Source Code Review</span>
+        <span class="svc-tag">Penetration Testing Services</span>
+        <span class="svc-tag">Configuration Assessment</span>
+        <span class="svc-tag">Red Team Assessment</span>
+        <span class="svc-tag">Stress &amp; Load Testing</span>
+      </div>
+    </div>
+
+    <!-- SPECIAL AUDIT -->
+    <div class="svc-cat">
+      <h3>🔎 Special Audit Services <span>Compliance</span></h3>
+      <div class="svc-tag-grid">
+        <span class="svc-tag">Web Trust Audit</span>
+        <span class="svc-tag">Cyber Forensic Audit</span>
+        <span class="svc-tag">Anti-Bribery Audit</span>
+        <span class="svc-tag">Anti Ransomware Audit</span>
+        <span class="svc-tag">Anti Phishing Scan Services</span>
+        <span class="svc-tag">Data Migration Audit</span>
+        <span class="svc-tag">Smart City Audit</span>
+        <span class="svc-tag">SWIFT Audit (SWIFT CSCF)</span>
+        <span class="svc-tag">Data Localization Audit (RBI/NPCL)</span>
+        <span class="svc-tag">Certifying &amp; Registry Authority Audit</span>
+        <span class="svc-tag">Compliance Audit of Compliance Dept.</span>
+        <span class="svc-tag">Configuration Audit (AS400)</span>
+        <span class="svc-tag">Payment Data Storage Audit</span>
+      </div>
+    </div>
+
+    <!-- IS AUDIT -->
+    <div class="svc-cat">
+      <h3>💻 IS Audit – Compliance Management <span>ISO 27001</span></h3>
+      <div class="svc-tag-grid">
+        <span class="svc-tag">DC, DRS &amp; Critical Setup Audits</span>
+        <span class="svc-tag">E-Governance Audit</span>
+        <span class="svc-tag">Risk Management Assessment</span>
+        <span class="svc-tag">CBS Core Banking Solution Audit</span>
+        <span class="svc-tag">Software Asset Management Audit</span>
+        <span class="svc-tag">Sarbanes-Oxley (SOX) Audit</span>
+        <span class="svc-tag">RBI Payment System Audit</span>
+        <span class="svc-tag">RTGS / NEFT / Treasury Site Audit</span>
+        <span class="svc-tag">ATM / Debit &amp; Credit Card Audit</span>
+        <span class="svc-tag">PCI DSS QSA</span>
+        <span class="svc-tag">Security Risk &amp; GAP Assessment</span>
+        <span class="svc-tag">IT Outsourcing Audits</span>
+        <span class="svc-tag">Cheque Truncation System Audit</span>
+        <span class="svc-tag">GIGW Audit</span>
+        <span class="svc-tag">AUA KUA Compliance (UIDAI)</span>
+        <span class="svc-tag">Operating Systems Audit</span>
+        <span class="svc-tag">Database Audit</span>
+        <span class="svc-tag">Firewall &amp; IDS Audit</span>
+        <span class="svc-tag">Data Center Audit</span>
+        <span class="svc-tag">Internet / Core Banking Audit</span>
+      </div>
+    </div>
+
+    <!-- OTHER STANDARDS -->
+    <div class="svc-cat">
+      <h3>📋 Other Standards &amp; Frameworks <span>Full Portfolio</span></h3>
+      <div class="svc-tag-grid">
+        <span class="svc-tag">ISO 37001 – Anti-Bribery Management</span>
+        <span class="svc-tag">ISO 41001 – Facility Management</span>
+        <span class="svc-tag">ISO 56002 – Innovation Management</span>
+        <span class="svc-tag">ISO 30414 – HR Management System</span>
+        <span class="svc-tag">ISO 31000 – Risk Management</span>
+        <span class="svc-tag">ISO 14971 – Risk Management for Medical Devices</span>
+        <span class="svc-tag">ISO 10015 – Competence Management</span>
+        <span class="svc-tag">ISO 17020 – Inspection Body Requirements</span>
+        <span class="svc-tag">ISO 17021 – Certification Body Requirements</span>
+        <span class="svc-tag">ISO 22716 – Cosmetics GMP</span>
+        <span class="svc-tag">ISO 28000 – Supply Chain Security</span>
+        <span class="svc-tag">PoSH – Prevention of Sexual Harassment</span>
+        <span class="svc-tag">ISO 20252 – Market &amp; Social Research</span>
+        <span class="svc-tag">ISO/TC 290 – Brand Evaluation</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Contact Us</div>
+      <div class="sidebar-card-body">
+        <div class="contact-item">
+          <span class="contact-icon">🏢</span>
+          <div><div class="contact-label">Company</div><div style="font-weight:600;">M/S THE QUALITY CATALYST</div></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div><div class="contact-label">Noida Office</div><div>G 75, Sector 56, Noida – 201301</div></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div><div class="contact-label">Registered Office</div><div>393/11 Nehru Nagar, Baljeet Nagar, New Delhi</div></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div><div class="contact-label">Tel / Mob</div><div>120-3144262 | +91 9999188058</div></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div><div class="contact-label">Email</div><div>tqc.delhi@gmail.com</div></div>
+        </div>
+        <a href="contact.html" class="enquire-btn">Enquire Now</a>
+      </div>
+    </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div>&copy; 2025 <strong>M/S The Quality Catalyst</strong> · All rights reserved.</div>
+  <div style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:6px;">
+    RO: 393/11 Nehru Nagar Baljeet Nagar, New Delhi-110008 &nbsp;|&nbsp; Noida: G 75 Sector 56, Noida-201301
+    &nbsp;|&nbsp; Tel: 120-3144262 &nbsp;|&nbsp; Mob: 9999188058
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
