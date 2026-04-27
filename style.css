@@ -457,8 +457,8 @@ footer .footer-links a:hover { color: var(--red); }
   .stats-bar { grid-template-columns: 1fr; }
   .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
   .stat-item:last-child { border-bottom: none; }
-  .slider { height: 260px; }
-  .slide-content { padding: 20px 16px 64px 16px; max-width: 100%; }
+  .slider { height: 300px; }
+  .slide-content { padding: 16px 16px 56px 16px; max-width: 100%; }
   .slide-content h2 { font-size: 19px; }
   .slide-content p { font-size: 13px; margin-bottom: 16px; }
   .slide-btn { padding: 9px 16px; font-size: 12px; }
@@ -488,7 +488,7 @@ footer .footer-links a:hover { color: var(--red); }
   .logo-text .tagline { font-size: 9px; }
   .stat-num { font-size: 28px; }
   .slide-content h2 { font-size: 17px; }
-  .slider { height: 240px; }
+  .slider { height: 300px; }
   .slide-badge { font-size: 9px; }
   .values-grid { grid-template-columns: 1fr; }
 }

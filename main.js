@@ -685,19 +685,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ]
     },
-    {
-      label: 'Industries',
-      href: 'services.html',
-      icon: `<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="10" width="4" height="8"/><rect x="8" y="6" width="4" height="12"/><rect x="14" y="2" width="4" height="16"/></svg>`,
-      children: [
-        'Manufacturing', 'Automotive', 'Food & Beverages', 'Healthcare & Pharma',
-        'IT & Software', 'Construction', 'Energy & Utilities', 'Textile & Apparel',
-        'Logistics & Supply Chain', 'Education & Training'
-      ]
-    },
+    
     {
       label: 'Blog',
-      href: 'index.html#blog',
+      href: 'blog.html',
       icon: `<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2.5a2.121 2.121 0 013 3L6 17l-4 1 1-4L14.5 2.5z"/></svg>`
     },
     {
