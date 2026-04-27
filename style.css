@@ -40,14 +40,15 @@ ul { list-style: none; }
   background: var(--navy);
   position: sticky; top: 0; z-index: 1000;
   box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  height: 72px; overflow: visible;
 }
 .topbar-inner {
   display: flex; align-items: center; justify-content: space-between;
-  max-width: 1240px; margin: 0 auto; padding: 0 28px;
+  max-width: 1240px; margin: 0 auto; padding: 0 28px; height: 100%;
 }
-.logo-area { display: flex; align-items: center; gap: 12px; padding: 8px 0; text-decoration: none; }
-.logo-img { width: 56px; height: 56px; object-fit: contain; border-radius: 6px; background: transparent; padding: 0; }
-.logo-icon { width: 54px; height: 54px; background: var(--red); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Raleway',sans-serif; font-weight: 900; color: #fff; font-size: 18px; flex-shrink: 0; letter-spacing: -1px; }
+.logo-area { display: flex; align-items: center; gap: 12px; padding: 4px 0; text-decoration: none; }
+.logo-img { width: 80px; height: 80px; object-fit: contain; border-radius: 0; background: transparent; padding: 0; border: none; outline: none; box-shadow: none; filter: hue-rotate(340deg) saturate(1.5) brightness(1.05); }
+.logo-icon { width: 76px; height: 76px; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Raleway',sans-serif; font-weight: 900; color: #fff; font-size: 22px; flex-shrink: 0; letter-spacing: -1px; }
 .logo-text .company { font-family: 'Raleway',sans-serif; font-weight: 800; font-size: 20px; color: #fff; letter-spacing: 0.3px; line-height: 1.2; }
 .logo-text .tagline { font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 1px; text-transform: uppercase; }
 
@@ -1476,8 +1477,8 @@ body.drawer-open .mob-menu-btn .mob-menu-bar:nth-child(3) {
   .topbar { padding-left: 0 !important; }
 
   /* Tighten logo on mobile */
-  .logo-img { width: 44px; height: 44px; }
-  .logo-icon { width: 42px; height: 42px; font-size: 14px; }
+  .logo-img { width: 56px; height: 56px; border-radius: 0; }
+  .logo-icon { width: 54px; height: 54px; font-size: 16px; }
   .logo-text .company { font-size: 15px; }
   .logo-text .tagline { font-size: 9px; letter-spacing: 0.6px; }
 }
